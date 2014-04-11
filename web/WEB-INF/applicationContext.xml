@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!-- <bean id="dataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+        <property name="url" value="jdbc:oracle:thin:@81.17.1.77:1521:czjgbs"></property>
+        <property name="username" value="jgbs"></property>
+        <property name="password" value="jgbs"></property>
+    </bean> -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <!-- 指定连接数据库的驱动 -->
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+        <!-- 指定连接数据库的URL -->
+
+        <property name="url" value="jdbc:oracle:thin:@10.211.55.4:1521:orcl"></property>
+
+        <!-- 指定连接数据库的用户名 -->
+        <property name="username" value="car"></property>
+        <!-- 指定连接数据库的密码 -->
+        <property name="password" value="car"></property>
+        <!-- 指定连接数据库连接池的最大连接数 -->
+        <property name="maxActive" value="20"/>
+        <!-- 指定连接数据库连接池的最小连接数 -->
+        <property name="minIdle" value="1"/>
+        <!-- 指定连接数据库连接池的初始化连接数 -->
+        <property name="initialSize" value="1"/>
+        <!-- 指定连接数据库连接池的连接的最大空闲时间 -->
+        <property name="maxWait" value="20"/>
+    </bean>
+
+    <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 指定所上传文件的总大小不能超过200KB。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 -->
+        <property name="maxUploadSize" value="3145728"/>
+        <!-- 单位是字节	3M	(1024*1024*3 B) -->
+        <property name="maxInMemorySize" value="4096"/>
+    </bean>
+
+    <!--
+        SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException
+    -->
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->
+    <bean id="exceptionResolver"
+          class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <!--
+                    遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/view/error_fileupload.jsp页面
+                -->
+                <prop
+                        key="org.springframework.web.multipart.MaxUploadSizeExceededException">error_fileupload
+                </prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+</beans>

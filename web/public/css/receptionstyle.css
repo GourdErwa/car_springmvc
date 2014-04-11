@@ -1,0 +1,376 @@
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background: url(../image/body.jpg) no-repeat top center #627185;
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+
+#index {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background: url(../image/bgcar.jpg) no-repeat top center #627185;
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0099d3;
+}
+
+td {
+    color: #000;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+img {
+    border: none;
+}
+
+select {
+    font-size: 12px;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+}
+
+input {
+    border: solid #999 1px;
+    background: #FFF;
+    font-size: 12px;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    padding-top: 2px;
+}
+
+.shadow {
+    font-size: 12px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    filter: dropshadow(color:#FFFFFF, offx=1, offy=1, positive=true);
+}
+
+.top {
+    vertical-align: top;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.whitebold {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.whiteboldbig {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.black {
+    color: #4D4D4D;
+}
+
+.blackbig {
+    color: #4D4D4D;
+    font-size: 14px;
+}
+
+.blackbold {
+    color: #4D4D4D;
+    font-weight: bold;
+}
+
+.blackboldbig {
+    color: #4D4D4D;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.red {
+    color: #DE1C00;
+}
+
+.redbold {
+    color: #DE1C00;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.bgglinks {
+    background: url(../images/bgglinks.jpg) no-repeat top center;
+    height: 37px;
+    text-align: center;
+}
+
+#glinks td {
+    background: url(../images/bgglinksline.jpg) no-repeat top right;
+    height: 37px;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 0px 0px 0px;
+}
+
+#glinks a {
+    color: #FFF;
+}
+
+#glinks a:hover {
+    color: #B9DCFF;
+}
+
+#out {
+    display: block;
+    position: relative;
+    width: 1000px;
+}
+
+#inner {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+}
+
+ul, li {
+    list-style: none;
+}
+
+fieldset, img {
+    border: none;
+}
+
+legend {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+html {
+    overflow: -moz-scrollbars-vertical;
+}
+
+#ifocus {
+    width: 900px;
+    height: 380px;
+    background: url(../images/bgcar.jpg) no-repeat top left;
+    margin: 0px;
+    padding: 20px 0px 0px 20px;
+}
+
+#ifocus_pic {
+    display: inline;
+    position: relative;
+    float: left;
+    width: 900px;
+    height: 338px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#ifocus_piclist {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#ifocus_piclist li {
+    width: 680px;
+    height: 338px;
+    overflow: hidden;
+}
+
+#ifocus_piclist img {
+    width: 680px;
+    height: 338px;
+}
+
+#ifocus_btn {
+    position: absolute;
+    left: 695px;
+    top: 0px;
+    z-index: 1;
+    width: 165px;
+    margin: 0px;
+}
+
+#ifocus_btn li {
+    float: left;
+    width: 165px;
+    height: 77px;
+    cursor: pointer;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#ifocus_btn img {
+    width: 165px;
+    height: 77px;
+    margin: 0px 0px 7px 0px;
+    border: solid #B1B1B1 2px;
+}
+
+#ifocus_btn .current {
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity=100);
+}
+
+#ifocus_opdiv {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    height: 35px;
+    background: #000;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#ifocus_tx {
+    display: none;
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+    color: #FFF;
+    font-size: 12px;
+}
+
+#ifocus_tx .normal {
+    display: none;
+}
+
+.bgbot {
+    background: url(../images/bot.jpg) no-repeat top center;
+    text-align: center;
+    vertical-align: top;
+}
+
+.wordservice {
+    line-height: 16px;
+    color: #535353;
+}
+
+.bgcarshow {
+    background: url(../images/bgcarshow.jpg) no-repeat top;
+    height: 225px;
+    vertical-align: top;
+    padding: 35px 0px 0px 10px;
+}
+
+.bgclient {
+    background: url(../images/bgclient.jpg) no-repeat top;
+    height: 225px;
+    vertical-align: top;
+    padding: 40px 0px 0px 10px;
+}
+
+#carshow td {
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+#carshow img {
+    margin-bottom: 4px;
+    width: 220px;
+    height: 150px;
+}
+
+#client td {
+    background: url(../images/iconclient.gif) no-repeat top left;
+    height: 20px;
+    color: #535353;
+    padding-left: 10px;
+}
+
+#client a {
+    color: #535353;
+}
+
+#client a:hover {
+    color: #039;
+}
+
+#page {
+    background: url(../images/bgmid.jpg) repeat-y left;
+    margin: 0px 0px 15px 0px;
+}
+
+#page td {
+    padding: 0px 20px 0px 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#page .bghead {
+    background: url(../images/bghead.jpg) no-repeat top;
+    font-weight: bold;
+    font-size: 12px;
+    height: 50px;
+    padding-top: 7px;
+}
+
+#page .bghead span {
+    font-size: 16px;
+    color: #1f2f77;
+}
+
+#page .bgtail {
+    background: url(../images/bgtail.jpg) no-repeat bottom;
+    height: 25px;
+}
+
+.bgbotcar {
+    background: url(../images/bgbotcar.gif) no-repeat top center;
+    height: 244px;
+    text-align: center;
+}
+
+#car td {
+    width: 33.3%;
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+}
+
+#car img {
+    width: 180px;
+    height: 130px;
+    margin-bottom: 8px;
+}
+
+#turnpage td {
+    font-size: 12px;
+    text-align: right;
+}
