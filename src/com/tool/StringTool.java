@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 /**
  * Created by lw on 14-3-21.
+ * 字符串操作工具
  */
 public class StringTool {
 
