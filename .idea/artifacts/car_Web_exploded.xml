@@ -5,7 +5,7 @@
       <element id="javaee-facet-resources" facet="car/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="car" />
+          <element id="module-output" name="car_springmvc" />
         </element>
       </element>
     </root>
