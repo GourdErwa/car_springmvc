@@ -154,7 +154,6 @@ public class UrlController {
      */
     @RequestMapping(value = "/contact_us.do", method = RequestMethod.GET)
     public ModelAndView Contact_Us() {
-        System.out.printf("" + "0000----");
         return new ModelAndView("reception/contact_us");
     }
 
