@@ -43,7 +43,6 @@ public class UserInfoService {
      * @return
      */
     public HttpSession getFunctionForUser(HttpSession session, String userName) {
-
         List<Map> list = userInfoDao.getFunction(userName);
         String functionid;
         for (Map map : list) {

@@ -11,7 +11,7 @@ public class InitParameters {
 
     public final static String PROPERTIES_PATH = "/car.properties";
 
-    public final static String PROJECTNAME = "太原慕达汽车租赁公司";//项目名称配置
+    public final static String projectName = "太原慕达汽车租赁公司";//项目名称配置
 
     public final static String COMPANYNAME = "太原慕达网络公司";//项目名称配置
 
@@ -27,13 +27,6 @@ public class InitParameters {
 
     public final static String[] COLORS = {"#FFF68F", "#FFC1C1", "#FFC125", "#FF7F24", "#FF0000", "#FF00FF", "#EEEE00", "#EEC900", "#EEB422", "#E066FF", "#DAA520", "#D2691E", "#CDCD00", "#CD8500", "#CD5B45", "#C0FF3E", "#BC8F8F", "#ADFF2F", "#A52A2A", "#A020F0", "#8E388E", "#76EE00", "#1874CD", "#00CD00", "#00868B", "#0000FF"};
 
-    public static void main(String[] args) {
-      /*  String s = "insert into leavemessage (id,ip,address,messagedate,messages,isshow)values ('','81.17.1.111','哈尔滨道里区',to_date('2014-03-24','yyyy-MM-dd'),'  SpringMVC Demo','0')";
-        for (int i = 201; i < 300; i++) {
-            System.out.println("insert into leavemessage (id,ip,address,messagedate,messages,isshow)values ('" + i + "','81.17.1.111','哈尔滨道里区',to_date('2014-02-14','yyyy-MM-dd'),'  SpringMVC Demo','0');");
-        }*/
-
-    }
 
     public String a() {
         return getClass().getResource("#").getFile().toString();

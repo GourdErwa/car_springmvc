@@ -69,8 +69,12 @@ public class AdminController {
      */
     @RequestMapping(value = "/loginout.admin.do", method = RequestMethod.GET)
     public ModelAndView loginout(HttpServletRequest request) {
-        request.getSession().removeAttribute("userName");
-
+        HttpSession session=request.getSession();
+        session.removeAttribute("userName");
+        String [] strs=session.getValueNames();
+        for(int i=0;i<strs.length;i++){
+        	session.removeAttribute(strs[i]);
+        }
         return new ModelAndView("admin_login");
     }
 }

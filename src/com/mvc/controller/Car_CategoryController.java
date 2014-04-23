@@ -197,8 +197,8 @@ public class Car_CategoryController {
     @RequestMapping(value = "/getCar_categorysIna.do", method = RequestMethod.GET)
     @ResponseBody
     public void getCar_categorysIna(HttpServletResponse response, HttpServletRequest request) throws UnsupportedEncodingException {
-        String categoryname = new String(request.getParameter("categoryname").toString().getBytes("iso-8859-1"), "utf-8");
-        StringTool.writeByAction(car_categoryService.getCar_categorysIna(categoryname), response);
+        //String categoryname = new String(request.getParameter("categoryname").toString().getBytes("iso-8859-1"), "utf-8");
+        StringTool.writeByAction(car_categoryService.getCar_categorysIna(request.getParameter("categoryname")), response);
 
     }
 
