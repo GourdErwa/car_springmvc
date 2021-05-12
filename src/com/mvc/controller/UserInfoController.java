@@ -38,6 +38,7 @@ public class UserInfoController {
         String thisPage = request.getParameter("thisPage");
         String pageMethodName = request.getParameter("pageMethodName");
         PageTool pageTool = userInfoService.getUserInfos(search, thisPage, pageMethodName,pageShowSize);
+        System.out,println("123");
         return pageTool;
     }
 
