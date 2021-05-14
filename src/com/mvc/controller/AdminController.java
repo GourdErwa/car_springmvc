@@ -34,6 +34,7 @@ public class AdminController {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        System.out.println("zailaiyici");
         System.out.println("niubi");
 
         if (StringTool.isNullString(username) || StringTool.isNullString(password)) {
